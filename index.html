@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JuniorNavsegda - IT & Разработка</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      :root {
+        --primary-color: #2ecc71;
+        --dark-bg: #2c3e50;
+        --light-text: #ecf0f1;
+      }
+
+      body {
+        line-height: 1.6;
+        background-color: var(--dark-bg);
+        color: var(--light-text);
+      }
+
+      .header {
+        background: var(--dark-bg);
+        padding: 1rem;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        color: var(--light-text);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary-color);
+      }
+
+      .hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 1rem;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+      }
+
+      .hero-content h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+
+      .cta-button {
+        padding: 1rem 2rem;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: transform 0.3s;
+      }
+
+      .cta-button:hover {
+        transform: scale(1.05);
+      }
+
+      .section {
+        padding: 5rem 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .section h2 {
+        text-align: center;
+        margin-bottom: 3rem;
+        color: var(--primary-color);
+      }
+
+      .video-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .video-item iframe {
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+      }
+
+      /* Стили для формы заказа */
+      .contact-form {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: var(--primary-color);
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.8rem;
+        background: #34495e;
+        border: 1px solid #2ecc71;
+        border-radius: 5px;
+        color: white;
+        font-size: 1rem;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #27ae60;
+        box-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
+      }
+
+      .footer {
+        background: #1a252f;
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .social-links a {
+        color: var(--light-text);
+        font-size: 1.5rem;
+        transition: color 0.3s;
+      }
+
+      .social-links a:hover {
+        color: var(--primary-color);
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+
+        .hero-content h1 {
+          font-size: 2rem;
+        }
+
+        .video-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-form {
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a href="#" class="logo">JuniorNavsegda</a>
+        <div class="nav-links">
+          <a href="#about">О канале</a>
+          <a href="#videos">Видео</a>
+          <a href="#order">Заказать сайт</a>
+          <a href="#contact">Контакты</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>IT и разработка для начинающих</h1>
+        <p>
+          Практические уроки, советы и лайфхаки для старта в программировании
+        </p>
+        <button class="cta-button">Подписаться на YouTube</button>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <h2>О канале</h2>
+      <p>Лучшее айти сообщество!</p>
+    </section>
+
+    <section class="section" id="videos">
+      <h2>Последние видео</h2>
+      <div class="video-grid">
+        <div class="video-item">
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID_1"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="video-item">
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID_2"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="video-item">
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID_3"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="order">
+      <h2>Заказать у нас сайт</h2>
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/ваша-форма"
+        method="POST"
+      >
+        <div class="form-group">
+          <label for="name">Ваше имя:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Ваш Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="project">Описание проекта:</label>
+          <textarea id="project" name="project" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="cta-button">Отправить заявку</button>
+      </form>
+    </section>
+
+    <footer class="footer" id="contact">
+      <div class="social-links">
+        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-telegram"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+      <p>© 2023 JuniorNavsegda. Все права защищены</p>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/ваш-код.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
